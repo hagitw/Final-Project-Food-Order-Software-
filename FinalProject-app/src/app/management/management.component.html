@@ -1,0 +1,138 @@
+<h1>Hello Manager</h1>
+
+    <div style="margin-top: 190px;" class=" container ">
+    <div class="row">
+        <nav class="col-sm-2 " id="myScrollspy ">
+            <ul class="nav nav-pills nav-stacked ">
+                <li>
+<button style="font-family: Papyrus;"  (click)="GetUsers()">Users</button></li>
+            </ul>
+        </nav>
+        <nav class="col-sm-3 " id="myScrollspy ">
+            <ul class="nav nav-pills nav-stacked ">
+              <li><button style="font-family: Papyrus;" (click)="GetUserOrders()">Orders</button></li>
+
+            </ul>
+        </nav>
+        <nav class="col-sm-3 " id="myScrollspy ">
+            <ul class="nav nav-pills nav-stacked ">
+             <li><button style="font-family: Papyrus;"  (click)="GetConnections()">Connections</button></li>
+            </ul>
+        </nav>
+        <nav class="col-sm-3 " id="myScrollspy ">
+            <ul class="nav nav-pills nav-stacked ">
+               <li><button style="font-family: Papyrus;"  (click)="GetDishes()">Dishes</button></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+
+
+<div *ngIf="ShowOrders" class="container">
+    <h2>Users Orders</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>First Name</th>
+                <th>Order Number</th>
+                <th>Amount</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of arrOrders; let i = index">
+                <td>{{order.Id}}</td>
+                <td>{{order.CustomerId}}</td>
+                <td>{{order.OrderId}}</td>
+                <td>{{order.Amount}}</td>
+                <td>{{order.Price}}</td>
+                <td (click)="DeleteOrder(order)">Delete</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="ShowUsers" class="container">
+    <h2>Users</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let User of arrUser; let i = index">
+                <td>{{User.FirstName}}</td>
+                <td>{{User.LastName}}</td>
+                <td>{{User.Email}}</td>
+                <td (click)="DeleteUser(User)">Delete</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="ShowConnections" class="container">
+    <h2>Connect Us</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Massage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Connect of arrConnection; let i = index">
+                <td>{{Connect.Name}}</td>
+                <td>{{Connect.Subject}}</td>
+                <td>{{Connect.Email}}</td>
+                <td>{{Connect.Phone}}</td>
+                <td>{{Connect.Massage}}</td>
+                <td (click)="DeleteConnect(Connect)">Delete</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div *ngIf="ShowDishes" class="container">
+    <button (click)="GoAddDish()">Add Dish</button>
+    <h2>Dishes</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>chefId</th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Url</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Dish of arrDishes; let i = index">
+                <td>{{Dish.Id}}</td>
+                <td>{{Dish.chefId}}</td>
+                <td>{{Dish.category}}</td>
+                <td>{{Dish.Name}}</td>
+                <td>{{Dish.Description}}</td>
+                <td>{{Dish.Url}}</td>
+                <td>{{Dish.Price}}</td>
+                <td (click)="UpDateDish(Dish)">UpDate</td>
+                <td (click)="DeleteDish(Dish)">Delete</td>          
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+    

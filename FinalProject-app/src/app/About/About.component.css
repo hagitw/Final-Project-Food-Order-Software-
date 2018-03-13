@@ -1,0 +1,9 @@
+.page-template-default {
+    background-image: url("http://www.toto-rest.co.il/wp-content/uploads/2015/07/about-bg.jpg");
+    width: 1500px;
+    height: 490px;
+    margin-top: 150px;
+    padding-top: 2px;
+    color: white;
+    font-family: Papyrus;
+}

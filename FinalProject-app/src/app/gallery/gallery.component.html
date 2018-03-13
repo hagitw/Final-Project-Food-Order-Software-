@@ -1,0 +1,22 @@
+<div class="modal fade" id="selectedImageModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+	<img *ngIf="selectedImage" src="{{selectedImage.Url}}"  width="400" height="400">
+				<div class="details">
+				<button (click)="add(selectedImage)">Add</button>
+			<input name="count" type="number" min="1" max="5" [(ngModel)]="count">
+				<h2 *ngIf="selectedImage">{{selectedImage.Name}}</h2>			
+				<p *ngIf="selectedImage">{{selectedImage.Description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ul id="thumbnailsList" style="top:35%">
+	<p class="head" >{{datasource[0].category}}</p>
+	<li *ngFor="let image of datasource">
+		<img src="{{image.Url}}" class="tn" width="191" height="146" data-toggle="modal" data-target="#selectedImageModal" (click)="setSelectedImage(image)">
+	</li>
+</ul>

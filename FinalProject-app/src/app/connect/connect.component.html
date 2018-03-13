@@ -1,0 +1,52 @@
+<div class="container">
+
+    <p style="color:white"><img src="http://www.toto-rest.co.il/wp-content/themes/toto-rest/images/EMAIL.png">Chicago, US</p>
+    <p style="color:white"><img src="http://www.toto-rest.co.il/wp-content/themes/toto-rest/images/MAP.png">Phone: +00 1515151515</p>
+    <p style="color:white"><img src="http://www.toto-rest.co.il/wp-content/themes/toto-rest/images/WAZE.png">Email: mail@mail.com</p>
+
+    <div class="form-group">
+        <label for="subject">subject</label>
+        <input placeholder="subject" id="subject" name="subject" type="text" class="form-control" [(ngModel)]="subject" required
+            #trvsubject="ngModel">
+        <div *ngIf="trvsubject.errors && (trvsubject.dirty || trvsubject.touched)" class="alert alert-danger">
+            <div [hidden]="!trvsubject.errors.required">
+                subject is required
+            </div>
+        </div>
+    </div>
+  
+    <div class="form-group">
+        <label for="cityName"> name</label>
+        <input placeholder="Name" id="cityName" name="textname" type="text" class="form-control" [(ngModel)]="textname" required
+            #trvTextname="ngModel">
+        <!-- split to 2 if it is dirty     if it is touch it mean that already had a value in this input and he remmber it -->
+        <div *ngIf="trvTextname.errors && (trvTextname.dirty || trvTextname.touched)" class="alert alert-danger">
+            <!-- if have error return true and show the error-->
+            <div [hidden]="!trvTextname.errors.required">
+                Name is required
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Connectemail">email</label>
+        <input placeholder="Email" id="Connectemail" name="email" type="email" class="form-control" [(ngModel)]="email" required
+            #trvemail="ngModel">
+        <div *ngIf="trvemail.errors && (trvemail.dirty || trvemail.touched)" class="alert alert-danger">
+            <div [hidden]="!trvemail.errors.required">
+                Email is required
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="msg">comment:</label>
+        <textarea id="msg" name="massage" type="text" class="form-control" [(ngModel)]="massage" required #trvmassage="ngModel"></textarea>
+        <div *ngIf="trvmassage.errors && (trvmassage.dirty || trvmassage.touched)" class="alert alert-danger">
+            <div [hidden]="!trvmassage.errors.required">
+                Please Enter Your comments
+            </div>        
+        </div>
+        <br/>
+        <button class="btn btn-primary" (click)="SendComments()">Send</button>
+    </div>
+</div>
+                        

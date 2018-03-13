@@ -1,0 +1,19 @@
+
+<header>  
+<a style="color:rgb(205, 166, 60);" [routerLink]="['/gift-voucher']">Gift voucher</a>
+<a style="color:rgb(205, 166, 60);" [routerLink] = "['/Home']"> Home </a> 
+<a style="color:rgb(205, 166, 60);" *ngIf="auth.isAuthenticated()" [routerLink] = "['/Invitation']">Invitation </a> 
+<a style="color:rgb(205, 166, 60);" [routerLink] = "['/Menu']"> Menu </a> 
+<a style="color:rgb(205, 166, 60);" *ngIf="auth.isAuthenticated()" [routerLink] = "['/PersonalArea']"> Personal area </a> 
+<a style="color:rgb(205, 166, 60)" *ngIf="auth.IsManager()" [routerLink] = "['/Management']"> Management </a> 
+<a style="color:rgb(205, 166, 60)" *ngIf="!auth.isAuthenticated()" (click)="auth.login()"><span class="glyphicon glyphicon-log-in"></span>Log In</a>
+<a style="color:rgb(205, 166, 60)" *ngIf="auth.isAuthenticated()" (click)="auth.logout()">Log Out</a>
+</header>
+
+<footer>Keren Aklom Hagit Worke Project; Teach-Career
+<a  style="color:rgb(205, 166, 60)" [routerLink] = "['/Connect']"> Connect-Us </a> 
+<a  style="color:rgb(205, 166, 60)" [routerLink] = "['/About']"> About-Us </a> 
+
+</footer>
+
+ <router-outlet></router-outlet>

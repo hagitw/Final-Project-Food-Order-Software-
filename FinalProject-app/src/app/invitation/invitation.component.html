@@ -1,0 +1,49 @@
+<div class="InvitationDiv">
+  <h1>Your Invitations</h1>
+
+  <table *ngIf="edited" class="table table-bordered">
+
+    <th>CostomerId</th>
+    <th>Dish</th>
+    <th>Count</th>
+    <th>Price(for one Dish)</th>
+
+    <tr *ngFor="let item of arrInvitation; let i = index">
+      <td>{{item.OrderId}}</td>
+      <td>{{item.Dish.Name}}</td>
+      <td>{{item.Count}}</td>
+      <td >{{item.Dish.Price}}$</td>
+      <td (click)="Delete(i)">
+        <span style="color:black" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-remove"></span>
+      </td>
+    </tr>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title"></h4>
+          </div>
+          <div class="modal-body">
+            <p>Are You Sure You Want To Delete This Dish?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            <button (click)="DeleteOrder()" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </table>
+  <br/>
+
+
+  <p>Totale Amount: <input readonly style=" width: 50px;
+    height: 30px;
+      width: 60px;
+      text-align:center;
+    background-color: lightblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;" value='{{totalPrice}}$'></p>
+   <button style="color:black" (click)="GoPayment(totalPrice)">Go To Payment 
+</button>
+</div>

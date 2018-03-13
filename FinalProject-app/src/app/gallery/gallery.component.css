@@ -1,0 +1,44 @@
+.flex-container{
+     background-image: url(https://cdn.pixabay.com/photo/2017/08/02/01/28/lifestyle-2569540_960_720.jpg);
+     background-size: cover;
+    }
+    ul { padding:0; width:780px;
+	 margin:10.5% auto; 
+	  
+	}
+  	li { 
+		  display:inline;
+	
+		}
+        .tn{ 
+	   margin:2px 0px;
+	   box-shadow:#999 1px 1px 3px 1px; 
+	   cursor: pointer ;
+		      font-family: Papyrus;
+        }
+  	.modal-content {
+		width: 670px !important;
+			 font-family: Papyrus;
+			  font-weight: bold;
+				font-size: 20px;
+	}
+
+	.glyphicon-remove{
+		color: white;
+	}
+	.head{	
+	text-align: center;		
+		margin-top: 10%;	
+	background: rgba(255,255,255,0.3);
+	color:black;font-weight: bold; 
+	 font-size: 50px; 
+	  font-family: Papyrus;
+		position: canter;
+	}
+
+	.img{
+float:left;
+	}
+.details{
+	float: right;
+}

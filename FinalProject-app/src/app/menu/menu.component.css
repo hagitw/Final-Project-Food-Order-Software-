@@ -1,0 +1,23 @@
+
+select{
+    clear: right;
+    clear: left;
+    position: static;
+    margin: auto;
+    margin-left: 554px;
+    margin-top: -35%;
+    font-size: 28px;
+    
+}button{
+    background-color: lightgreen;
+    
+}
+#myScrollspy{
+  background: rgba(255,255,255,0.3);color:black;font-weight: bold;  font-size: 28px; font-family: Papyrus;
+} 
+.row,text-center{
+margin-top:-30px; 
+} 
+
+
+

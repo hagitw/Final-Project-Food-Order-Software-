@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Add New Dish</h1>
+    <form>
+        <div class="form-group">
+            <label for="idName">Dish Name</label>
+            <input id="idName" name="NDish" type="text" class="form-control" [(ngModel)]="NDish">
+        </div>
+
+        <div class="form-group">
+            <label>Chef Name</label>
+            <select name="NChef" class="form-control" [(ngModel)]="NChef">
+                     <option selected>Select your option</option>
+<option  *ngFor="let NChef of arrChef">{{NChef.Name}}</option>
+</select>
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+            <select name="Category" class="form-control" [(ngModel)]="Category">
+<option *ngFor="let category of arrCategory">{{category}}</option>
+</select>
+        </div>
+
+        <div class="form-group">
+            <label for="idDescription">Description</label>
+            <input id="idDescription" name="Description" type="text" class="form-control" [(ngModel)]="Description">
+        </div>
+        <div class="form-group">
+            <label for="idUrl">Url</label>
+            <input id="idUrl" type="file" name="Url" (change)="UpLoadFile($event)" class="upload" value="Upload" />
+        </div>
+        <div class="form-group">
+            <label for="idPrice">Price</label>
+            <input id="idPrice" name="Price" type="number" class="form-control" [(ngModel)]="Price">
+        </div>
+              <button (click)="AddDish()" class="btn btn-primary">Add Dish</button>
+    </form>
+</div>

@@ -1,0 +1,51 @@
+
+  .full-profile{
+       background-image: url("http://www.toto-rest.co.il/wp-content/uploads/2015/07/about-bg.jpg");
+    width: 1500px;
+    height: 490px;
+    margin-top: 150px;
+    padding-top: 2px;
+    color: white;
+      font-family: Papyrus;
+      text-align: center;
+    
+
+      }
+.table{
+  margin-top: -400px;
+    margin-right: -500%;
+    clear: right;
+    clear: left;
+  height:100px; width:100px;
+  color: white;
+  direction: rtl;
+    font-family: simple_clm, arial;
+    text-align: right;
+   font-size: 18px;
+}
+ .container
+{
+  overflow: scroll;
+    height:100px;
+} 
+
+  #table-scroll {
+  height:150px;
+  overflow:auto;  
+  margin-top:20px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;  /* for vertical scrollbars */
+  height: 8px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 4px;
+}
+

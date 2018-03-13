@@ -1,0 +1,55 @@
+<div style="margin-top: 190px;" class=" container ">
+    <div class="row ">
+        <nav class="col-sm-2 " id="myScrollspy ">
+            <ul class="nav nav-pills nav-stacked ">
+                <li>
+                    <a style="background: rgba(255,255,255,0.3);color:black;font-weight: bold;  font-size: 28px; font-family: Papyrus; " (click)="routeDynamically('meat')">Meat</a></li>
+            </ul>
+        </nav>
+        <nav class="col-sm-3 " id="myScrollspy ">
+            <ul class="nav nav-pills nav-stacked ">
+                <li><a style="color:black;font-weight: bold;  font-size: 28px; font-family: Papyrus;background: rgba(255,255,255,0.3);" (click)="routeDynamically('prv')">Perva</a></li>
+            </ul>
+        </nav>
+        <nav class="col-sm-3 " id="myScrollspy ">
+            <ul class="nav nav-pills nav-stacked ">
+                <li><a style="background: rgba(255,255,255,0.3);color:black;font-weight: bold;  font-size: 28px; font-family: Papyrus;" (click)="routeDynamically('dairy')">Dairy</a></li>
+            </ul>
+        </nav>
+        <nav class="col-sm-3 " id="myScrollspy ">
+            <ul class="nav nav-pills nav-stacked ">
+                <li>
+                    <a style="background: rgba(255,255,255,0.3);color:black;font-weight: bold;  font-size: 28px; font-family: Papyrus;" (click)="routeDynamically('dessert')">Dessert</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+<!---> שלושת התמונות (המנות) הממלצות <!-->
+<div style="margin-top: 10px; font-family: Papyrus; background: rgba(255,255,255,0.3);  font-family: Papyrus;color:BLACK " class="container-fluid text-center bg-grey ">
+    <h2>Portfolio</h2><br>
+    <h4>What we have created</h4>
+    <div class="row text-center ">
+        <div class="col-sm-4 ">
+            <div class="thumbnail ">
+                <img src="http://media.istockphoto.com/photos/delicious-hamburgers-picture-id496389174?k=6&m=496389174&s=612x612&w=0&h=5P467Ob9B-V-V702d4EnHM0KXSxxE28yZguLyBGZyLo=" alt="Paris " width="400 " height="300 ">
+                <p><strong>hamburgers</strong></p>
+            </div>
+        </div>
+        <div class="col-sm-4 ">
+            <div class="thumbnail ">
+                <img src="http://cdn2.stylecraze.com/wp-content/uploads/2014/08/Top-25-Splendid-Veg-Pasta-Recipes-2.jpg" alt="New York " width="500 " height="400 ">
+                <p><strong>Pasta</strong></p>           
+            </div>
+        </div>
+        <div class="col-sm-4 ">
+            <div class="thumbnail ">
+                <img src="http://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/2/19/1/WU0701H_Molten-Chocolate-Cakes_s4x3.jpg.rend.hgtvcom.616.462.suffix/1485880987811.jpeg" alt="San Francisco " width="400 " height="300 ">
+                <p><strong>Chocolate Cakes</strong></p>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet> 

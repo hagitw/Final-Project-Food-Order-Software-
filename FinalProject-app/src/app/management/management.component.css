@@ -1,0 +1,13 @@
+.container {
+  background: rgba(0,0,0,0.8);
+          font-family: Papyrus;  
+         margin-bottom: 20%;            
+}
+
+ h2,th ,td{
+    color : white;
+    	      font-family: Papyrus;
+}
+          .a{
+            margin-top: 50px;
+          }
